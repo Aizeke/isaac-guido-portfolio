@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Isaac Guido | Web Dev</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/images/">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top start-nav">
+        <a class="navbar-brand" href="#">Isaac Guido</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- END OF NAV -->
+    <!-- HOME SECTION -->
+    <section id="home" class="parallax">
+        <div class="home-text mt-50 mb-50">
+            <h1>ISAAC GUIDO</h1>
+        </div>
+        <div class="home-text ">
+            <h1>FULL STACK WEB DEVELOPER</h1>
+        </div>
+    </section>
+    <!-- END OF HOME -->
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container relative">
+            <h2>About Me</h2>
+
+        </div>
+    </section>
+    <!-- END OF ABOUT -->
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <div class="container relative">
+            <h2>My Skills</h2>
+
+        </div>
+    </section>
+    <!-- END OF SKILLS -->
+    <!-- PORJECTS SECTION -->
+    <section id="projects">
+        <div class="container relative">
+            <h2>Projects</h2>
+            <h2>Coding Bootcamp</h2>
+        </div>
+    </section>
+    <!-- END OF PROJECTS -->
+    <!-- GOOGLE MAPS API -->
+    <div class="mapbox">
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYWl6ZWtlIiwiYSI6ImNrMnAyZGoxMTE5dWQzZHFlMjB4cmlxb3UifQ.empZEjOuaVp68WWOfcZMbg';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11'
+            });
+        </script>
+    </div>
+    <!-- END OF GOOGLE MAPS -->
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container relative">
+            <h2>Contact Me</h2>
+
+        </div>
+    </section>
+    <!-- END OF CONTACT -->
+    <!-- FOOTER -->
+    <section id="footer">
+
+    </section>
+    <!-- END OF FOOTER -->
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+    <script src="./assets/js/logic.js"></script>
+</body>
+
+</html>
