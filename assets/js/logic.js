@@ -12,6 +12,24 @@
                 header.removeClass('bg-dark').addClass("bg-transparent");
             }
         });
+
+        $('#map-cover').on("click", (e) => {
+            e.preventDefault();
+
+            const cover = $('#map-cover');
+
+            if ( cover.data("map-active") === "on" ){
+                cover.addClass("active-map");
+                $(".map-text-on").addClass("display-off");
+                $(".map-text-off").removeClass("display-off");
+                cover.data("map-active", "off");
+            } else { 
+                cover.removeClass("active-map");
+                $(".map-text-off").addClass("display-off");
+                $(".map-text-on").removeClass("display-off");
+                cover.data("map-active", "on");
+            }
+        })
     });
 
 })(jQuery);
