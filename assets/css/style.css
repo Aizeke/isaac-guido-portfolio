@@ -13,7 +13,12 @@ body, html {
 
 body {
     background: #ffffff;
-    position: relative;          
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 section {
@@ -27,16 +32,20 @@ section {
 
 h2 {
     font-family: 'Dosis', sans-serif;
-    font-size: 50;
+    font-size: 50px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #12171C;
+    opacity: .9;
 }
 
-h2:nth-child(2) {
-    color: #444c58;
-    text-transform: none;
-    font-size: 30px;
-    font-weight: 200;
+p::selection, h1::selection, h2::selection {
+    background: #12171C;
+    color: #ffffff;
+  }
+
+p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
+    background: #12171C;
+    color: #ffffff;
 }
 /* END OF ELEMENT TAGS */
 /* SECTIONS */
@@ -56,12 +65,19 @@ h2:nth-child(2) {
     background: #ffffff;
     color: #12171C;
     height: 100%;
+    border-bottom: 1px solid #12171C;
 }
 
 #skills {
     background: #ffffff;
     color: #12171C;
     height: 100%;
+}
+
+#banner {
+    background: #12171C;
+    color: #ffffff;
+    height: 40%;
 }
 
 #projects {
