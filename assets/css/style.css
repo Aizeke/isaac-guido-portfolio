@@ -22,12 +22,13 @@ html {
 }
 
 section {
-    padding-top: 5%;
     max-height: 100%;
+    width: auto;
     font-weight: 400;
     color: #2a3039;
     z-index: 1;
     position: relative;
+    padding-top: 5%;
 }
 
 h2 {
@@ -38,13 +39,15 @@ h2 {
     opacity: .9;
 }
 
-p::selection, h1::selection, h2::selection {
-    background: #12171C;
+p::selection, h1::selection, h2::selection, h3::selection, i::selection, 
+label::selection, input::selection, textarea::selection {
+    background: #000;
     color: #ffffff;
   }
 
-p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
-    background: #12171C;
+p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, 
+i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-selection {
+    background: #000;
     color: #ffffff;
 }
 /* END OF ELEMENT TAGS */
@@ -60,39 +63,74 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
     color: #ffffff;
 }
 
+.home-text {
+    margin-top: 20%;
+    text-align: center;
+}
+
+.home-text h1 {
+    font-size: 45px;
+    padding: 10px;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+.home-text p {
+    font-size: 25px;
+    text-shadow: 2px 2px 4px #000000;
+    letter-spacing: 30px;
+}
+
 /* END OF HOME */
 #about  {
     background: #ffffff;
     color: #12171C;
+    font-size: 25px;
     height: 100%;
-    border-bottom: 1px solid #12171C;
 }
 
+#about p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+/* END OF ABOUT */
 #skills {
     background: #ffffff;
     color: #12171C;
     height: 100%;
 }
 
+/* END OF SKILLS */
 #banner {
-    background: #12171C;
     color: #ffffff;
     height: 40%;
 }
 
+/* END OF BANNER */
 #projects {
-    background: #ffffff;
-    color: #12171C;
+    background:#EFEFEF;
+    color: #000000;
     height: 100%;
 }
 
+/* END OF PROJECTS */
 #contact {
-    background: #12171C;
-    color: #ffffff;
-    height: 60%;
+    background: #ffffff;
+    color: #000000;
+    height: 55%;
 }
 
+#footer {
+    background: #ffffff;
+    color: #000000;
+    height: 5%;
+}
+
+/* END OF CONTACT */
+
 /* END OF SECTIONS */
+
 /* NAV */
 .navbar {
     background: none;
@@ -149,7 +187,7 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
 }
 
 .mapbox {
-    height: 35%;
+    height: 40%;
 }
 
 .map-text {
@@ -171,22 +209,29 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
 .marker {
     background-image: url('../images/pin.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
   }
 /* END OF MAPBOX */
 /* OTHER */
-.parallax {
-
-    background-image: url("https://www.tokkoro.com/picsup/5238287-wallpaper-black-wallpapers-black-background-forest-sunlight-ray-nature-tree-black-and-white-monochrome-shadow-path-tunnel-light-discovery-garden-jungle-png-images.jpg");
-  
+.parallax-home {
+    background-image: url("");
+    background: #12171C;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+.parallax-banner {
+    background-image: url("");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .relative {
     position: relative;
@@ -194,4 +239,38 @@ p::-moz-selection, h1::-moz-selection, h2::-moz-selection {
 
 .absolute {
     position: absolute;
+}
+
+/* START OF MEDIA SCREENs */
+
+@media screen and (max-width: 767px) {
+	nav ul {
+		flex-direction: column;
+	}
+ 
+	nav li {
+		margin-top: 1px;
+	}
+  
+  nav li a {
+    font-size: 1.5em;
+  }
+  
+  .scroll-icon {
+    display: none;
+  }
+}
+ 
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .open-menu ~ nav {
+		padding: 20px 0;
+	}
+ 
+	nav li a {
+		padding: 3px;
+	}
 }
