@@ -1,12 +1,11 @@
-$(document).ready(function() {
-    $('[data-toggle="tooltip"]').tooltip();
+$(document).ready(function () {
 
     $(function () {
         var header = $(".start-nav");
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
 
-            if (scroll >= 15) {
+            if (scroll >= 20) {
                 header.removeClass('start-nav').addClass('on-scroll-nav');
                 header.removeClass('bg-transparent').addClass("bg-dark");
             } else {
@@ -33,8 +32,6 @@ $(document).ready(function() {
             }
         })
     });
-
-
     // MAP BOX
 
     // mapboxgl.accessToken = 'pk.eyJ1IjoiYWl6ZWtlIiwiYSI6ImNrMnAyNWIyZTAxMHczY3A0azFucHJyMzEifQ.eaBU6RYrSCwd079_pGSV6A';

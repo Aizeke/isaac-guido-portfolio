@@ -40,13 +40,15 @@ h2 {
 }
 
 p::selection, h1::selection, h2::selection, h3::selection, i::selection, 
-label::selection, input::selection, textarea::selection {
+label::selection, input::selection, textarea::selection, img::selection, 
+a::selection, span::selection {
     background: #000;
     color: #ffffff;
   }
 
 p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, 
-i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-selection {
+i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-selection, 
+img::-moz-selection, a::-moz-selection, span::-moz-selection {
     background: #000;
     color: #ffffff;
 }
@@ -55,13 +57,22 @@ i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-
 
 #home {
     text-transform: uppercase;
-    letter-spacing: 50px;
+    letter-spacing: 20px;
     font-weight: 200;
     font-size: 30px;
     opacity: .9;
     height: 100%;
     color: #ffffff;
 }
+
+.parallax-home {
+    background-image: url("https://www.jameskay.com/skin/frontend/default/jameskay/images/slideshow/home/slideshow3.jpg");
+    /* background: #12171C; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 .home-text {
     margin-top: 20%;
@@ -71,27 +82,105 @@ i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-
 .home-text h1 {
     font-size: 45px;
     padding: 10px;
-    text-shadow: 2px 2px 4px #000000;
-
+    text-shadow: 1px 1px 1px rgba(165, 165, 165, 0.8);
 }
 
-.home-text p {
-    font-size: 25px;
-    text-shadow: 2px 2px 4px #000000;
-    letter-spacing: 30px;
+/* Rotating text affect */
+.rtxt{
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8); 
+}
+.rtxt span{
+	color: #444;
+    font-weight: 200;
+    text-align: left;
+}
+.rtxt span{
+    position: absolute;
+    top: 0;
+    left: 20%;
+	opacity: 0;
+    overflow: hidden;
+    /* 3 sec for each word */
+	-webkit-animation: rotateWord 12s linear infinite 0s;
+	-ms-animation: rotateWord 12s linear infinite 0s;
+    animation: rotateWord 12s linear infinite 0s;
+}
+.rtxt span:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+	-ms-animation-delay: 3s; 
+	animation-delay: 3s;
+}
+.rtxt span:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s;
+}
+.rtxt span:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+	-ms-animation-delay: 9s; 
+	animation-delay: 9s;
+}
+/* For 2 more span texts */
+/* .rtxt span:nth-child(5) { 
+    -webkit-animation-delay: 12s; 
+	-ms-animation-delay: 12s; 
+	animation-delay: 12s;
+}
+.rtxt span:nth-child(6) { 
+    -webkit-animation-delay: 15s; 
+	-ms-animation-delay: 15s; 
+	animation-delay: 15s;
+} */
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+	8% { opacity: 1; color: #0099ff; -webkit-transform: translateY(0px);}
+    18% { opacity: 1; color: #00ff00; -webkit-transform: translateY(0px); }
+	25% { opacity: 0; -webkit-transform: translateY(30px); }
+    100% { opacity: 0; }
 }
 
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+	8% { opacity: 1; color: #0099ff; -ms-transform: translateY(0px);}
+    18% { opacity: 1; color: #00ff00; -ms-transform: translateY(0px); }
+	25% { opacity: 0; -ms-transform: translateY(30px); }
+    100% { opacity: 0; }
+}
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	8% { opacity: 1; color: #0099ff; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    18% { opacity: 1; color: #00ff00; -webkit-transform: translateY(0px); transform: translateY(0px); }
+    25% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    100% { opacity: 0; }
+
+}
 /* END OF HOME */
 #about  {
     background: #ffffff;
-    color: #12171C;
+    color: #373737;
     font-size: 25px;
     height: 100%;
 }
 
 #about p {
-    font-size: 20px;
-    padding: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #373737;
+}
+
+#about img {
+    width: auto;
+    height: 500px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 /* END OF ABOUT */
@@ -105,6 +194,14 @@ i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-
 #banner {
     color: #ffffff;
     height: 40%;
+}
+
+.parallax-banner {
+    background-image: url("https://c.wallhere.com/photos/0a/a2/1600x800_px_Brume_landscape_monochrome_nature_photography_rocks_sea-557155.jpg!d");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* END OF BANNER */
@@ -121,13 +218,43 @@ i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-
     height: 55%;
 }
 
+#contact h2 {
+    margin-bottom: 25px;
+}
+
+i.fas {
+    font-size: 12px;
+    opacity: .8;
+}
+
+i.fa-info-circle {
+    font-size: 12px;
+    opacity: .5;
+}
+/* END OF CONTACT */
+a.to-top {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(0,0,0, .2);
+    font-size: 45px;
+    z-index: 2;
+}
+
+a.to-top:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* END OF SCROLL */
 #footer {
     background: #ffffff;
     color: #000000;
     height: 5%;
 }
-
-/* END OF CONTACT */
 
 /* END OF SECTIONS */
 
@@ -216,22 +343,6 @@ i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-
   }
 /* END OF MAPBOX */
 /* OTHER */
-.parallax-home {
-    background-image: url("");
-    background: #12171C;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-.parallax-banner {
-    background-image: url("");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .relative {
     position: relative;
