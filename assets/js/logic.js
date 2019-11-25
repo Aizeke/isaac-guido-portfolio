@@ -32,6 +32,11 @@ $(document).ready(function () {
             }
         })
     });
+
+    // OWL CAROUSEL
+    $(".carousel").owlCarousel({
+        autoPlay:true
+    });
     // MAP BOX
 
     // mapboxgl.accessToken = 'pk.eyJ1IjoiYWl6ZWtlIiwiYSI6ImNrMnAyNWIyZTAxMHczY3A0azFucHJyMzEifQ.eaBU6RYrSCwd079_pGSV6A';

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,400,600&display=swap');
 
 * {
     margin: 0;
@@ -54,6 +54,60 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 }
 /* END OF ELEMENT TAGS */
 /* SECTIONS */
+
+/* NAV */
+.navbar {
+    background: none;
+    color: white;
+    font-size: 20px;
+}
+
+.start-nav {
+	transform: translateY(0);
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-in-out;
+	transition : all 0.3s ease-in-out;
+}
+
+.on-scroll-nav {
+    background-color: #12171C!important;
+    opacity: .9;
+    padding: 7px 0;
+	-webkit-transition : all 0.3s ease-in-out;
+	transition : all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    margin-left: 5%;
+}
+
+.inner-nav {
+    display: inline-block;
+    position: relative;
+}
+
+.inner-nav ul{
+    float: right;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+.inner-nav ul li {
+    float: left;
+    margin-left: 40px;
+    position: relative;
+}
+
+/* END OF NAV */
 
 #home {
     text-transform: uppercase;
@@ -185,26 +239,12 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 
 /* END OF ABOUT */
 #skills {
-    background: #ffffff;
+    background: #EFEFEF;
     color: #12171C;
     height: 100%;
 }
 
 /* END OF SKILLS */
-#banner {
-    color: #ffffff;
-    height: 40%;
-}
-
-.parallax-banner {
-    background-image: url("https://c.wallhere.com/photos/0a/a2/1600x800_px_Brume_landscape_monochrome_nature_photography_rocks_sea-557155.jpg!d");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* END OF BANNER */
 #projects {
     background:#EFEFEF;
     color: #000000;
@@ -215,7 +255,11 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 #contact {
     background: #ffffff;
     color: #000000;
-    height: 55%;
+    height: 50%;
+}
+
+#contact form {
+    margin-bottom: 10px;
 }
 
 #contact h2 {
@@ -251,34 +295,18 @@ a.to-top:hover {
 
 /* END OF SCROLL */
 #footer {
-    background: #ffffff;
+    background: #12171C;
     color: #000000;
     height: 5%;
 }
 
+.social a{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    text-decoration: none;
+}
 /* END OF SECTIONS */
-
-/* NAV */
-.navbar {
-    background: none;
-    color: white;
-}
-
-.start-nav {
-	transform: translateY(0);
-	padding: 10px 0;
-	-webkit-transition : all 0.3s ease-in-out;
-	transition : all 0.3s ease-in-out;
-}
-
-.on-scroll-nav {
-    background-color: #12171C!important;
-    opacity: .9;
-    padding: 7px 0;
-	-webkit-transition : all 0.3s ease-in-out;
-	transition : all 0.3s ease-in-out;
-}
-/* END OF NAV */
 /* MARGIN CLASSES */
 .mt-50 {
     margin-top: 50px;

@@ -13,18 +13,20 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top start-nav">
-        <a class="navbar-brand" href="#">Isaac Guido</a>
+        <a class="navbar-brand" href="#">ISAAC GUIDO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse inner-nav" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="#home">Home</a>
@@ -67,13 +69,11 @@
         <div class="container relative">
             <h2>About Me</h2>
             <div class="mt-50 row">
-
                 <div class="col-md-4">
                     <div class="relative">
                         <img id="about-img" src="./assets/images/0.jpg" alt="Portfolio Image">
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <p>
                         &emsp;My name is Isaac Guido and I am a software engineer located in Orange County, CA. I love
@@ -83,7 +83,6 @@
                         Developer bootcamp at UCI for a change of pace.
                     </p>
                 </div>
-
                 <div class="col-md-4">
                     <p>
                         &emsp;Now I am a web developer, with my roots firmly planted in traditional programming language
@@ -105,24 +104,39 @@
         </div>
     </section>
     <!-- END OF SKILLS -->
-    <section id="banner" class="parallax-banner">
-        <div class="redirect">
-            <h3>Looking for </h3>
-            <p>Thank you</p>
-            <a href="#contact" class="btn btn-mod btn-w btn-medium btn-round">Lets Connect</a>
-        </div>
-    </section>
     <!-- PORJECTS SECTION -->
     <section id="projects">
         <div class="container relative">
             <h2>Projects</h2>
             <h3>Coding Bootcamp</h3>
+
+            <!-- <div class="carousel owl-theme">
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+                <div> Your Content </div>
+            </div> -->
+
         </div>
     </section>
     <!-- END OF PROJECTS -->
+    <!-- MAPBOX API -->
+    <div class="mapbox relative">
+        <div id='map-cover' class="hidden-map" data-map-active="on">
+            <div class="map-text">
+                <div class="map-text-on">Open Map</div>
+                <div class="map-text-off display-off">Close Map</div>
+            </div>
+        </div>
+        <div id='map' class="absolute"></div>
+    </div>
+    <!-- END OF MAPS -->
     <!-- CONTACT SECTION -->
     <section id="contact">
-        <div class="col-md-6 container relative">
+        <div class="container relative">
             <h2>Contact Me</h2>
             <div class="row">
                 <div class="col-md-4">
@@ -158,37 +172,29 @@
 
             </div>
         </div>
+        <div class="scroll relative">
+            <a href="#" class="to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
     </section>
     <!-- END OF CONTACT -->
-    <!-- MAPBOX API -->
-    <div class="mapbox relative">
-        <div id='map-cover' class="hidden-map" data-map-active="on">
-            <div class="map-text">
-                <div class="map-text-on">Open Map</div>
-                <div class="map-text-off display-off">Close Map</div>
-            </div>
-        </div>
-        <div id='map' class="absolute"></div>
-    </div>
-    <!-- END OF MAPS -->
     <!-- FOOTER -->
     <section id="footer">
-
         <div class="container">
             <div class="row justify-content-center">
-                <div class="social col-md-6">
-                    <a href="#" title="Facebook" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/drk_aiz" title="Twitter" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/isaac-guido-b79827183/" title="LinkedIn" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Aizeke" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="col-md-6">
+                    <div class="social">
+                        <a href="https://www.instagram.com/iiguido/" title="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/drk_aiz" title="Twitter" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/isaac-guido-b79827183/" title="LinkedIn" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Aizeke" title="GitHub" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
 
-        </div>
-        <div class="scroll relative">
-            <a href="#top" class="to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
     </section>
     <!-- END OF FOOTER -->
@@ -205,6 +211,8 @@
         crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/smoothscroll.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
 </body>
 
 </html>
