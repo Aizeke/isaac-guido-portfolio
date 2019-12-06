@@ -189,8 +189,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); }
-	8% { opacity: 1; color: #0099ff; -webkit-transform: translateY(0px);}
-    18% { opacity: 1; color: #00ff00; -webkit-transform: translateY(0px); }
+	8% { opacity: 1; color: #ffffff; -webkit-transform: translateY(0px);}
+    18% { opacity: 1; color: #527bff; -webkit-transform: translateY(0px); }
 	25% { opacity: 0; -webkit-transform: translateY(30px); }
     100% { opacity: 0; }
 }
@@ -198,8 +198,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 @-ms-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -ms-transform: translateY(-30px); }
-	8% { opacity: 1; color: #0099ff; -ms-transform: translateY(0px);}
-    18% { opacity: 1; color: #00ff00; -ms-transform: translateY(0px); }
+	8% { opacity: 1; color: #ffffff; -ms-transform: translateY(0px);}
+    18% { opacity: 1; color: #527bff; -ms-transform: translateY(0px); }
 	25% { opacity: 0; -ms-transform: translateY(30px); }
     100% { opacity: 0; }
 }
@@ -207,8 +207,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 @keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-	8% { opacity: 1; color: #0099ff; -webkit-transform: translateY(0px); transform: translateY(0px);}
-    18% { opacity: 1; color: #00ff00; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	8% { opacity: 1; color: #ffffff; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    18% { opacity: 1; color: #527bff; -webkit-transform: translateY(0px); transform: translateY(0px); }
     25% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
     100% { opacity: 0; }
 
@@ -222,19 +222,21 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 }
 
 #about p {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 5px;
     color: #373737;
 }
 
+#about h4 {
+    margin: 5px;
+    letter-spacing: 4px;
+}
+
 #about img {
-    width: auto;
-    height: 500px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    width: 300px;
+    height: auto;
+    margin: 0px 5px 20px 5px;
 }
 
 /* END OF ABOUT */
@@ -255,7 +257,7 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
 #contact {
     background: #ffffff;
     color: #000000;
-    height: 50%;
+    height: 60%;
 }
 
 #contact form {
@@ -297,7 +299,8 @@ a.to-top:hover {
 #footer {
     background: #12171C;
     color: #000000;
-    height: 5%;
+    height: 6%;
+    padding-top: 10px;
 }
 
 .social a{
