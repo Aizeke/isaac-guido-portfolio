@@ -41,14 +41,14 @@ h2 {
 
 p::selection, h1::selection, h2::selection, h3::selection, i::selection, 
 label::selection, input::selection, textarea::selection, img::selection, 
-a::selection, span::selection {
+a::selection, span::selection, div::selection {
     background: #000;
     color: #ffffff;
   }
 
 p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, 
 i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-selection, 
-img::-moz-selection, a::-moz-selection, span::-moz-selection {
+img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selection {
     background: #000;
     color: #ffffff;
 }
@@ -253,6 +253,19 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection {
     height: 100%;
 }
 
+.circle {
+    margin: 20px;
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+.circle span {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 20px;
+}
 /* END OF PROJECTS */
 #contact {
     background: #ffffff;
