@@ -39,16 +39,12 @@ h2 {
     opacity: .9;
 }
 
-p::selection, h1::selection, h2::selection, h3::selection, i::selection, 
-label::selection, input::selection, textarea::selection, img::selection, 
-a::selection, span::selection, div::selection {
+*::selection {
     background: #000;
     color: #ffffff;
   }
 
-p::-moz-selection, h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, 
-i::-moz-selection, label::-moz-selection, input::-moz-selection, textarea::-moz-selection, 
-img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selection {
+*::-moz-selection {
     background: #000;
     color: #ffffff;
 }
@@ -56,34 +52,35 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 /* SECTIONS */
 
 /* NAV */
-.navbar {
-    background: none;
-    color: white;
-    font-size: 20px;
-}
 
-.start-nav {
+.start-nav, .start-nav a {
 	transform: translateY(0);
-	padding: 10px 0;
-	-webkit-transition : all 0.3s ease-in-out;
-	transition : all 0.3s ease-in-out;
+    padding: 10px 0;
+	-webkit-transition : all 0.6s ease-in-out;
+    transition : all 0.6s ease-in-out;
+    color: rgb(22, 22, 22);
+    opacity: 0.9;
 }
 
 .on-scroll-nav {
     background-color: #12171C!important;
-    opacity: .9;
+    opacity: .85;
     padding: 7px 0;
-	-webkit-transition : all 0.3s ease-in-out;
-	transition : all 0.3s ease-in-out;
+	-webkit-transition : all 0.6s ease-in-out;
+	transition : all 0.6s ease-in-out;
+}
+
+.on-scroll-nav a {
+    color: #ffffff;
 }
 
 .navbar-brand {
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 400;
+    font-size: 35px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: capitalize;
-    margin-left: 5%;
+    margin-left: 300px;
 }
 
 .inner-nav {
@@ -111,16 +108,16 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 
 #home {
     text-transform: uppercase;
-    letter-spacing: 20px;
+    letter-spacing: 15px;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 35px;
     opacity: .9;
     height: 100%;
     color: #ffffff;
 }
 
 .parallax-home {
-    background-image: url("https://www.jameskay.com/skin/frontend/default/jameskay/images/slideshow/home/slideshow3.jpg");
+    background-image: url("../images/isaac-guido-banner.jpg");
     /* background: #12171C; */
     background-attachment: fixed;
     background-position: center;
@@ -129,29 +126,28 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
   }
 
 .home-text {
-    margin-top: 20%;
+    margin-top: 10%;
     text-align: center;
 }
 
 .home-text h1 {
-    font-size: 45px;
+    font-size: 55px;
     padding: 10px;
     text-shadow: 1px 1px 1px rgba(165, 165, 165, 0.8);
 }
 
-/* Rotating text affect */
+/* Rotating text effect for Home Page */
 .rtxt{
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.8); 
-}
-.rtxt span{
-	color: #444;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+    text-align: center;
+    color: #ffffff;
     font-weight: 200;
-    text-align: left;
 }
+
 .rtxt span{
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 25%;
 	opacity: 0;
     overflow: hidden;
     /* 3 sec for each word */
@@ -159,22 +155,28 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 	-ms-animation: rotateWord 12s linear infinite 0s;
     animation: rotateWord 12s linear infinite 0s;
 }
+
 .rtxt span:nth-child(2) { 
     -webkit-animation-delay: 3s; 
 	-ms-animation-delay: 3s; 
 	animation-delay: 3s;
 }
+
 .rtxt span:nth-child(3) { 
     -webkit-animation-delay: 6s; 
 	-ms-animation-delay: 6s; 
 	animation-delay: 6s;
 }
+
 .rtxt span:nth-child(4) { 
     -webkit-animation-delay: 9s; 
 	-ms-animation-delay: 9s; 
 	animation-delay: 9s;
 }
+
+
 /* For 2 more span texts */
+
 /* .rtxt span:nth-child(5) { 
     -webkit-animation-delay: 12s; 
 	-ms-animation-delay: 12s; 
@@ -189,8 +191,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); }
-	8% { opacity: 1; color: #ffffff; -webkit-transform: translateY(0px);}
-    18% { opacity: 1; color: #527bff; -webkit-transform: translateY(0px); }
+	8% { opacity: 1; -webkit-transform: translateY(0px);}
+    18% { opacity: 1; -webkit-transform: translateY(0px); }
 	25% { opacity: 0; -webkit-transform: translateY(30px); }
     100% { opacity: 0; }
 }
@@ -198,8 +200,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 @-ms-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -ms-transform: translateY(-30px); }
-	8% { opacity: 1; color: #ffffff; -ms-transform: translateY(0px);}
-    18% { opacity: 1; color: #527bff; -ms-transform: translateY(0px); }
+	8% { opacity: 1; -ms-transform: translateY(0px);}
+    18% { opacity: 1; -ms-transform: translateY(0px); }
 	25% { opacity: 0; -ms-transform: translateY(30px); }
     100% { opacity: 0; }
 }
@@ -207,13 +209,17 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 @keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-	8% { opacity: 1; color: #ffffff; -webkit-transform: translateY(0px); transform: translateY(0px);}
-    18% { opacity: 1; color: #527bff; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	8% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    18% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
     25% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
     100% { opacity: 0; }
 
 }
+
 /* END OF HOME */
+
+/* START OF ABOUT */
+
 #about  {
     background: #ffffff;
     color: #373737;
@@ -240,6 +246,8 @@ img::-moz-selection, a::-moz-selection, span::-moz-selection, div::-moz-selectio
 }
 
 /* END OF ABOUT */
+
+/* START OF SKILLS */
 #skills {
     background: #EFEFEF;
     color: #12171C;
