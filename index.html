@@ -13,15 +13,14 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg bg-transparent fixed-top start-nav">
-        <a class="navbar-brand" href="#">Isaac Guido</a>
+
+    <nav class="navbar navbar-expand-sm bg-transparent fixed-top start-nav">
+        <a class="navbar-brand mb-0 " href="#">Isaac Guido</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -46,6 +45,8 @@
             </ul>
         </div>
     </nav>
+
+
     <!-- END OF NAV -->
     <!-- HOME SECTION -->
     <section id="home" class="parallax-home">
@@ -57,7 +58,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="rtxt col-md-12">
+                <div class="rtxt col-md-12 col-xs-1">
                     <span>Front End Developer</span>
                     <span>Visual Designer</span>
                     <span>C++ Programmer</span>
@@ -124,42 +125,53 @@
     <!-- END OF ABOUT -->
     <!-- SKILLS SECTION -->
     <section id="skills">
-        <div class="container relative">
+        <div class="angled-v1"></div>
+
+        <div class="container text-center" id="spacer-top">
             <h2>My Skills</h2>
-            <div class="row">
-                <div class="container circles">
-
-                    <div class="">
-                        <div class="circle first"></div>
-                        <span>HTML5|CSS3</span>
-                    </div>
-
-                    <div class="">
-                        <div class="circle second"></div>
-                        <span>JavaScript</span>
-                    </div>
-
-                    <div class="">
-                        <div class="circle third"></div>
-                        <span>JQuery</span>
-                    </div>
-
-                    <div class="">
-                        <div class="circle forth"></div>
-                        <span>Bootstrap</span>
-                    </div>
-
+            <div class="row mt-5">
+                <div class= "col-md-6 col-sm-12">
+                    <ul class="skill-tree">
+                        <li>ES6</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>JavaScript</li>
+                        <li>JQuery</li>
+                        <li>ReactJS</li>
+                        <li>NodeJS</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <ul class="skill-tree">
+                        <li>Light MySQL</li>
+                        <li>Light NoSQL</li>
+                        <li>ExpressJS</li>
+                        <li>ORM</li>
+                        <li>CDN</li>
+                        <li>C++</li>
+                        <li>Git</li>
+                        <li>Light Java</li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <div class="angled-v2"></div>
     </section>
     <!-- END OF SKILLS -->
     <!-- PORJECTS SECTION -->
     <section id="projects">
         <div class="container relative">
             <h2>Projects</h2>
-            <h3>Coding Bootcamp</h3>
-        </div>
+            <div class="row">
+                <div class="col-md-6 project-card">
+                    hello
+                </div>
+                <div class="col-md-6 project-card">
+                    hello
+                </div>
+            </div>
     </section>
     <!-- END OF PROJECTS -->
     <!-- CONTACT SECTION -->
@@ -246,9 +258,6 @@
         crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
     <script src="./assets/js/smoothscroll.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/progressbar.js"></script>
-    <script src="./assets/js/progress-logic.js"></script>
     <script src="./assets/js/logic.js"></script>
 </body>
 

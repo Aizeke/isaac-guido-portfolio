@@ -8,7 +8,7 @@
 
 /* ELEMENT TAGS */
 body, html {
-    height: 100%;           
+    height: 100%;      
 }
 
 body {
@@ -80,7 +80,7 @@ h2 {
     text-align: center;
     letter-spacing: 4px;
     text-transform: capitalize;
-    margin-left: 300px;
+    margin-left: 10%;
 }
 
 .inner-nav {
@@ -249,31 +249,65 @@ h2 {
 
 /* START OF SKILLS */
 #skills {
-    background: #EFEFEF;
+    background: #ffffff;
     color: #12171C;
-    height: 100%;
+    height: 70%;
 }
 
+.angled-v1 {
+    position:absolute;
+    display:block;
+    right: 0;
+    top:0;
+    width:100%;
+    height: 200px;
+    border-style: solid;
+    border-width: 0 100vw 100px 100px;
+    border-color: transparent#52abe691 transparent transparent;
+  }
+  
+  #spacer-top {
+      margin-top: 5%;
+  }
+  
+  .skill-tree li{
+    margin: 10px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+  .angled-v2 {
+    position:absolute;
+    display:block;
+    right:0;
+    bottom:-50px;
+    height: 200px;
+    width:100%;
+    border-style: solid;
+    border-width: 0 100vw 0 100px;
+    border-color: transparent #52abe691 transparent transparent;
+    transform:rotate(2deg);
+  }
+
 /* END OF SKILLS */
+
+/* START OF PROJECTS */
 #projects {
-    background:#EFEFEF;
+    background: #ffffff;
     color: #000000;
     height: 100%;
 }
 
-.circle {
-    margin: 20px;
-    width: 200px;
-    height: 100px;
-    float: left;
+.project-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: center;
+    background: rgb(9,45,121);
+    background: linear-gradient(49deg, rgba(9,45,121,1) 0%, rgba(189,244,255,1) 80%);
+    color: white;
 }
 
-.circle span {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin: 20px;
-}
 /* END OF PROJECTS */
 #contact {
     background: #ffffff;
@@ -424,16 +458,33 @@ a.to-top:hover {
   }
 }
  
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 50%;
-  }
-  
-  .open-menu ~ nav {
+@media screen and (max-width: 320px) {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #about {
+        height:
+    }
+
+    .open-menu ~ nav {
 		padding: 20px 0;
 	}
  
 	nav li a {
 		padding: 3px;
-	}
+    }
+    
+    .navbar-brand {
+        margin-left: 20%;
+        width: 200px;
+    }
+
+    .rtxt {
+        font-size: 15px;
+        width: 280px;
+    }
+
+    
 }
