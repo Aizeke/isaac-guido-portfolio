@@ -8,7 +8,7 @@
 
 /* ELEMENT TAGS */
 body, html {
-    height: 100%;      
+    height: 100%;
 }
 
 body {
@@ -37,6 +37,7 @@ h2 {
     text-transform: uppercase;
     color: #12171C;
     opacity: .9;
+    text-align: center;
 }
 
 *::selection {
@@ -240,9 +241,10 @@ h2 {
 }
 
 #about img {
-    width: 300px;
+    width: 250px;
     height: auto;
     margin: 0px 5px 20px 5px;
+    border-radius: 100%;
 }
 
 /* END OF ABOUT */
@@ -251,19 +253,19 @@ h2 {
 #skills {
     background: #ffffff;
     color: #12171C;
-    height: 70%;
+    height: 60%;
 }
 
 .angled-v1 {
     position:absolute;
-    display:block;
+    display:inline-block;
     right: 0;
     top:0;
     width:100%;
-    height: 200px;
+    height: 120px;
     border-style: solid;
     border-width: 0 100vw 100px 100px;
-    border-color: transparent#52abe691 transparent transparent;
+    border-color: transparent#d3d6d891 transparent transparent;
   }
   
   #spacer-top {
@@ -277,19 +279,6 @@ h2 {
     font-weight: 400;
 }
 
-  .angled-v2 {
-    position:absolute;
-    display:block;
-    right:0;
-    bottom:-50px;
-    height: 200px;
-    width:100%;
-    border-style: solid;
-    border-width: 0 100vw 0 100px;
-    border-color: transparent #52abe691 transparent transparent;
-    transform:rotate(2deg);
-  }
-
 /* END OF SKILLS */
 
 /* START OF PROJECTS */
@@ -300,19 +289,21 @@ h2 {
 }
 
 .project-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    text-align: center;
-    background: rgb(9,45,121);
-    background: linear-gradient(49deg, rgba(9,45,121,1) 0%, rgba(189,244,255,1) 80%);
-    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin: 0;
+    width: auto;
+}
+
+.project-card, img {
+    width: 250px;
+    height: auto;
 }
 
 /* END OF PROJECTS */
 #contact {
     background: #ffffff;
     color: #000000;
-    height: 60%;
+    height: auto;
 }
 
 #contact form {
@@ -334,10 +325,10 @@ i.fa-info-circle {
 }
 /* END OF CONTACT */
 a.to-top {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 35px;
     height: 40px;
     line-height: 40px;
     text-align: center;
@@ -347,7 +338,7 @@ a.to-top {
 }
 
 a.to-top:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* END OF SCROLL */
@@ -456,16 +447,18 @@ a.to-top:hover {
   .scroll-icon {
     display: none;
   }
+
+  #about img {
+    width: 250px;
+    height: auto;
+}
+
 }
  
 @media screen and (max-width: 320px) {
 
     h2 {
         font-size: 30px;
-    }
-
-    #about {
-        height:
     }
 
     .open-menu ~ nav {
